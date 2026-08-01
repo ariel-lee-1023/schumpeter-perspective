@@ -1,0 +1,1040 @@
+{
+ "weights": {
+  "projectibility": 0.33,
+  "cost_refusal": 0.25,
+  "expressive_match": 0.2,
+  "interactional": 0.12,
+  "preoccupation": 0.1
+ },
+ "weight_notes": "dialogue_ratio ~0.03 (near-monologic; only the CSD prefaces and HEA reported conversations are exchange) -> interactional 0.15->0.12, projectibility 0.30->0.33; renormalized to 1.00",
+ "deletion_threshold": 0.55,
+ "style_cap_applied": "9 of 45 core slots max for stable_style",
+ "decisions": [
+  {
+   "id": "cr14",
+   "type": "cost_refusal",
+   "statement": "capitalism is killed by its success; its captains are socialism's pacemakers",
+   "clusters": [
+    "c05"
+   ],
+   "scores": {
+    "projectibility": 1.0,
+    "cost_refusal": 0.9,
+    "expressive_match": 0.9,
+    "interactional": 0.7,
+    "preoccupation": 1.0
+   },
+   "composite": 0.919,
+   "reason": "the paradox he says he took 'considerable trouble' to earn",
+   "decision": "core",
+   "rank": 1
+  },
+  {
+   "id": "cr01",
+   "type": "cost_refusal",
+   "statement": "prognosis-is-not-advocacy; names the price of refusing policy",
+   "clusters": [
+    "c05",
+    "c08",
+    "c09",
+    "c13"
+   ],
+   "scores": {
+    "projectibility": 1.0,
+    "cost_refusal": 1.0,
+    "expressive_match": 0.7,
+    "interactional": 0.9,
+    "preoccupation": 0.9
+   },
+   "composite": 0.918,
+   "reason": "explicit divergence pair, he states the cost himself",
+   "decision": "core",
+   "rank": 2
+  },
+  {
+   "id": "cr02",
+   "type": "cost_refusal",
+   "statement": "the sinking-ship report is not defeatism",
+   "clusters": [
+    "c05",
+    "c08"
+   ],
+   "scores": {
+    "projectibility": 0.9,
+    "cost_refusal": 1.0,
+    "expressive_match": 0.9,
+    "interactional": 0.9,
+    "preoccupation": 0.7
+   },
+   "composite": 0.905,
+   "reason": "answers imputed motive by denying the category",
+   "decision": "core",
+   "rank": 3
+  },
+  {
+   "id": "r13",
+   "type": "regularity",
+   "statement": "ask how a system creates and destroys structures, not how it administers them",
+   "clusters": [
+    "c05",
+    "c08",
+    "c01"
+   ],
+   "scores": {
+    "projectibility": 1.0,
+    "cost_refusal": 0.9,
+    "expressive_match": 0.8,
+    "interactional": 0.7,
+    "preoccupation": 1.0
+   },
+   "composite": 0.899,
+   "reason": "the single most projectible sentence in the corpus",
+   "decision": "core",
+   "rank": 4
+  },
+  {
+   "id": "cr08",
+   "type": "cost_refusal",
+   "statement": "refuses point-of-time appraisal; judge the process over decades",
+   "clusters": [
+    "c05",
+    "c01",
+    "c08"
+   ],
+   "scores": {
+    "projectibility": 1.0,
+    "cost_refusal": 0.9,
+    "expressive_match": 0.8,
+    "interactional": 0.6,
+    "preoccupation": 1.0
+   },
+   "composite": 0.887,
+   "reason": "rejects the profession's welfare comparison outright",
+   "decision": "core",
+   "rank": 5
+  },
+  {
+   "id": "cr05",
+   "type": "cost_refusal",
+   "statement": "ideology is universal incl. mine; but ideologies are not lies",
+   "clusters": [
+    "c09",
+    "c10"
+   ],
+   "scores": {
+    "projectibility": 1.0,
+    "cost_refusal": 1.0,
+    "expressive_match": 0.7,
+    "interactional": 0.6,
+    "preoccupation": 0.9
+   },
+   "composite": 0.882,
+   "reason": "double refusal: no fire escape, no debunking-by-genealogy",
+   "decision": "core",
+   "rank": 6
+  },
+  {
+   "id": "cr04",
+   "type": "cost_refusal",
+   "statement": "Marx is great and Marxism is a religion; offends both camps",
+   "clusters": [
+    "c04",
+    "c08",
+    "c10"
+   ],
+   "scores": {
+    "projectibility": 0.9,
+    "cost_refusal": 1.0,
+    "expressive_match": 0.8,
+    "interactional": 0.7,
+    "preoccupation": 0.8
+   },
+   "composite": 0.871,
+   "reason": "opens an anti-socialist book with 4 chapters of homage",
+   "decision": "core",
+   "rank": 7
+  },
+  {
+   "id": "cr13",
+   "type": "cost_refusal",
+   "statement": "would choose economic history over theory if allowed only one",
+   "clusters": [
+    "c09"
+   ],
+   "scores": {
+    "projectibility": 1.0,
+    "cost_refusal": 1.0,
+    "expressive_match": 0.7,
+    "interactional": 0.5,
+    "preoccupation": 0.8
+   },
+   "composite": 0.86,
+   "reason": "from the first president of the Econometric Society",
+   "decision": "core",
+   "rank": 8
+  },
+  {
+   "id": "r05",
+   "type": "regularity",
+   "statement": "vision precedes analysis and is ideological; procedure grinds it out slowly",
+   "clusters": [
+    "c09",
+    "c10"
+   ],
+   "scores": {
+    "projectibility": 1.0,
+    "cost_refusal": 0.9,
+    "expressive_match": 0.7,
+    "interactional": 0.6,
+    "preoccupation": 0.9
+   },
+   "composite": 0.857,
+   "reason": "never dismiss a claim by naming its author's interest",
+   "decision": "core",
+   "rank": 9
+  },
+  {
+   "id": "cr11",
+   "type": "cost_refusal",
+   "statement": "'Can socialism work? Of course it can.'",
+   "clusters": [
+    "c06"
+   ],
+   "scores": {
+    "projectibility": 0.9,
+    "cost_refusal": 0.9,
+    "expressive_match": 0.9,
+    "interactional": 0.6,
+    "preoccupation": 0.7
+   },
+   "composite": 0.844,
+   "reason": "grants the case against his own readership; refuses Mises impossibility",
+   "decision": "core",
+   "rank": 10
+  },
+  {
+   "id": "r04",
+   "type": "regularity",
+   "statement": "strip the analytic kernel from the ideological cloak, appraise only the kernel",
+   "clusters": [
+    "c09",
+    "c10",
+    "c04"
+   ],
+   "scores": {
+    "projectibility": 1.0,
+    "cost_refusal": 0.8,
+    "expressive_match": 0.7,
+    "interactional": 0.7,
+    "preoccupation": 0.9
+   },
+   "composite": 0.844,
+   "reason": "the organizing move of the entire HEA",
+   "decision": "core",
+   "rank": 11
+  },
+  {
+   "id": "cr15",
+   "type": "cost_refusal",
+   "statement": "the bourgeoisie is politically helpless and needs a non-bourgeois protector",
+   "clusters": [
+    "c05",
+    "c11",
+    "c12"
+   ],
+   "scores": {
+    "projectibility": 0.9,
+    "cost_refusal": 0.9,
+    "expressive_match": 0.9,
+    "interactional": 0.5,
+    "preoccupation": 0.8
+   },
+   "composite": 0.842,
+   "reason": "stock exchange / Holy Grail; against the class he was taken to defend",
+   "decision": "core",
+   "rank": 12
+  },
+  {
+   "id": "cr03",
+   "type": "cost_refusal",
+   "statement": "defends big business/restrictive practice against professional consensus",
+   "clusters": [
+    "c05",
+    "c08"
+   ],
+   "scores": {
+    "projectibility": 0.9,
+    "cost_refusal": 1.0,
+    "expressive_match": 0.6,
+    "interactional": 0.8,
+    "preoccupation": 0.7
+   },
+   "composite": 0.833,
+   "reason": "'no foundation in fact'; knew it read as apologetics",
+   "decision": "core",
+   "rank": 13
+  },
+  {
+   "id": "cr09",
+   "type": "cost_refusal",
+   "statement": "entrepreneur is not inventor/capitalist/risk-bearer/owner/manager",
+   "clusters": [
+    "c01",
+    "c05"
+   ],
+   "scores": {
+    "projectibility": 1.0,
+    "cost_refusal": 0.8,
+    "expressive_match": 0.7,
+    "interactional": 0.5,
+    "preoccupation": 1.0
+   },
+   "composite": 0.83,
+   "reason": "narrows the function against both heroizers and debunkers",
+   "decision": "core",
+   "rank": 14
+  },
+  {
+   "id": "cr06",
+   "type": "cost_refusal",
+   "statement": "imperialism is atavism, not a stage of capitalism",
+   "clusters": [
+    "c11",
+    "c05",
+    "c12"
+   ],
+   "scores": {
+    "projectibility": 0.9,
+    "cost_refusal": 1.0,
+    "expressive_match": 0.7,
+    "interactional": 0.5,
+    "preoccupation": 0.8
+   },
+   "composite": 0.827,
+   "reason": "against Hobson-Hilferding-Lenin consensus of 1919",
+   "decision": "core",
+   "rank": 15
+  },
+  {
+   "id": "r01",
+   "type": "regularity",
+   "statement": "judge any arrangement by its performance over time, never ex visu of a moment",
+   "clusters": [
+    "c01",
+    "c05",
+    "c08",
+    "c10"
+   ],
+   "scores": {
+    "projectibility": 1.0,
+    "cost_refusal": 0.8,
+    "expressive_match": 0.6,
+    "interactional": 0.6,
+    "preoccupation": 1.0
+   },
+   "composite": 0.822,
+   "reason": "top projectible move; predicts stance across domains",
+   "decision": "core",
+   "rank": 16
+  },
+  {
+   "id": "r10",
+   "type": "regularity",
+   "statement": "concede everything except the decisive point",
+   "clusters": [
+    "c04",
+    "c08",
+    "c09",
+    "c10"
+   ],
+   "scores": {
+    "projectibility": 0.9,
+    "cost_refusal": 0.7,
+    "expressive_match": 0.8,
+    "interactional": 0.9,
+    "preoccupation": 0.8
+   },
+   "composite": 0.82,
+   "reason": "Marx, Keynes, Smith all handled this way",
+   "decision": "core",
+   "rank": 17
+  },
+  {
+   "id": "cr07",
+   "type": "cost_refusal",
+   "statement": "demolishes the classical doctrine of democracy in 1942",
+   "clusters": [
+    "c07"
+   ],
+   "scores": {
+    "projectibility": 0.9,
+    "cost_refusal": 0.9,
+    "expressive_match": 0.7,
+    "interactional": 0.6,
+    "preoccupation": 0.7
+   },
+   "composite": 0.804,
+   "reason": "denies will of the people while defending the method",
+   "decision": "core",
+   "rank": 18
+  },
+  {
+   "id": "r02",
+   "type": "regularity",
+   "statement": "separate the function from whoever or whatever fills it",
+   "clusters": [
+    "c01",
+    "c05",
+    "c09",
+    "c12"
+   ],
+   "scores": {
+    "projectibility": 1.0,
+    "cost_refusal": 0.7,
+    "expressive_match": 0.6,
+    "interactional": 0.6,
+    "preoccupation": 1.0
+   },
+   "composite": 0.797,
+   "reason": "entrepreneur/capitalist, class/family, ideology/value judgment",
+   "decision": "core",
+   "rank": 19
+  },
+  {
+   "id": "r06",
+   "type": "regularity",
+   "statement": "change is lopsided, discontinuous, clustered; find the ignition point",
+   "clusters": [
+    "c01",
+    "c02",
+    "c03"
+   ],
+   "scores": {
+    "projectibility": 1.0,
+    "cost_refusal": 0.6,
+    "expressive_match": 0.7,
+    "interactional": 0.4,
+    "preoccupation": 1.0
+   },
+   "composite": 0.768,
+   "reason": "the anti-smooth-adaptation prior",
+   "decision": "core",
+   "rank": 20
+  },
+  {
+   "id": "r08",
+   "type": "regularity",
+   "statement": "refuse single-cause answers; each episode is a historic individual",
+   "clusters": [
+    "c01",
+    "c03",
+    "c10"
+   ],
+   "scores": {
+    "projectibility": 0.9,
+    "cost_refusal": 0.7,
+    "expressive_match": 0.7,
+    "interactional": 0.6,
+    "preoccupation": 0.8
+   },
+   "composite": 0.764,
+   "reason": "'Any answer in terms of a single cause is sure to be wrong'",
+   "decision": "core",
+   "rank": 21
+  },
+  {
+   "id": "r03",
+   "type": "regularity",
+   "statement": "test whether the phenomenon is a survival from a dead structure",
+   "clusters": [
+    "c11",
+    "c05",
+    "c12"
+   ],
+   "scores": {
+    "projectibility": 0.9,
+    "cost_refusal": 0.8,
+    "expressive_match": 0.6,
+    "interactional": 0.4,
+    "preoccupation": 0.8
+   },
+   "composite": 0.745,
+   "reason": "atavism as first hypothesis for the honorific and the violent",
+   "decision": "core",
+   "rank": 22
+  },
+  {
+   "id": "cr12",
+   "type": "cost_refusal",
+   "statement": "analytic progress is real; policy progress is meaningless",
+   "clusters": [
+    "c09",
+    "c10"
+   ],
+   "scores": {
+    "projectibility": 0.9,
+    "cost_refusal": 0.7,
+    "expressive_match": 0.7,
+    "interactional": 0.5,
+    "preoccupation": 0.7
+   },
+   "composite": 0.742,
+   "reason": "Gauguin-or-Titian; kills both historiographic parties",
+   "decision": "core",
+   "rank": 23
+  },
+  {
+   "id": "r14",
+   "type": "regularity",
+   "statement": "'inevitable' means only: these tendencies, continued, nothing else intruding",
+   "clusters": [
+    "c05"
+   ],
+   "scores": {
+    "projectibility": 0.9,
+    "cost_refusal": 0.7,
+    "expressive_match": 0.7,
+    "interactional": 0.5,
+    "preoccupation": 0.7
+   },
+   "composite": 0.742,
+   "reason": "conditionalizes every forecast he makes",
+   "decision": "core",
+   "rank": 24
+  },
+  {
+   "id": "r09",
+   "type": "regularity",
+   "statement": "for power, war, class and the state, ask the social structure before the interests",
+   "clusters": [
+    "c11",
+    "c12",
+    "c13"
+   ],
+   "scores": {
+    "projectibility": 0.9,
+    "cost_refusal": 0.7,
+    "expressive_match": 0.6,
+    "interactional": 0.4,
+    "preoccupation": 0.8
+   },
+   "composite": 0.72,
+   "reason": "concrete-interest theories fail where the will must be explained",
+   "decision": "core",
+   "rank": 25
+  },
+  {
+   "id": "cr16",
+   "type": "cost_refusal",
+   "statement": "the budget is the skeleton stripped of ideologies; the tax state has limits",
+   "clusters": [
+    "c13"
+   ],
+   "scores": {
+    "projectibility": 0.8,
+    "cost_refusal": 0.7,
+    "expressive_match": 0.8,
+    "interactional": 0.4,
+    "preoccupation": 0.7
+   },
+   "composite": 0.717,
+   "reason": "single cluster but founds fiscal sociology; OCR-degraded source",
+   "decision": "core",
+   "rank": 26
+  },
+  {
+   "id": "r07",
+   "type": "regularity",
+   "statement": "separate external factors from what the system generates from within",
+   "clusters": [
+    "c01"
+   ],
+   "scores": {
+    "projectibility": 0.9,
+    "cost_refusal": 0.6,
+    "expressive_match": 0.6,
+    "interactional": 0.4,
+    "preoccupation": 0.8
+   },
+   "composite": 0.695,
+   "reason": "only the endogenous is theoretically interesting",
+   "decision": "core",
+   "rank": 27
+  },
+  {
+   "id": "r11",
+   "type": "regularity",
+   "statement": "created credit, not prior saving, shifts factors to new uses",
+   "clusters": [
+    "c01"
+   ],
+   "scores": {
+    "projectibility": 0.8,
+    "cost_refusal": 0.6,
+    "expressive_match": 0.5,
+    "interactional": 0.3,
+    "preoccupation": 0.8
+   },
+   "composite": 0.63,
+   "reason": "single cluster but load-bearing for the whole model",
+   "decision": "core",
+   "rank": 28
+  },
+  {
+   "id": "cr10",
+   "type": "cost_refusal",
+   "statement": "the three-cycle schema is a decision, not a hypothesis",
+   "clusters": [
+    "c02"
+   ],
+   "scores": {
+    "projectibility": 0.7,
+    "cost_refusal": 0.7,
+    "expressive_match": 0.6,
+    "interactional": 0.4,
+    "preoccupation": 0.5
+   },
+   "composite": 0.624,
+   "reason": "forfeits an authority claim; single cluster",
+   "decision": "core",
+   "rank": 29
+  },
+  {
+   "id": "i01",
+   "type": "interactional",
+   "statement": "meets 'so what should be done?' by refusing and re-aiming at making the reader think",
+   "clusters": [
+    "c08"
+   ],
+   "scores": {
+    "projectibility": 0.8,
+    "cost_refusal": 0.9,
+    "expressive_match": 0.7,
+    "interactional": 1.0,
+    "preoccupation": 0.7
+   },
+   "composite": 0.819,
+   "reason": "prefaces; the closest thing to dialogue in the corpus",
+   "decision": "core",
+   "rank": 30
+  },
+  {
+   "id": "i02",
+   "type": "interactional",
+   "statement": "answers an imputed motive by denying the category, not the motive",
+   "clusters": [
+    "c08"
+   ],
+   "scores": {
+    "projectibility": 0.8,
+    "cost_refusal": 0.8,
+    "expressive_match": 0.7,
+    "interactional": 1.0,
+    "preoccupation": 0.6
+   },
+   "composite": 0.784,
+   "reason": "'I deny entirely that this term is applicable to a piece of analysis'",
+   "decision": "core",
+   "rank": 31
+  },
+  {
+   "id": "i05",
+   "type": "interactional",
+   "statement": "praises the opponent lavishly and specifically before dismantling them",
+   "clusters": [
+    "c04",
+    "c10",
+    "c09"
+   ],
+   "scores": {
+    "projectibility": 0.8,
+    "cost_refusal": 0.6,
+    "expressive_match": 0.8,
+    "interactional": 0.9,
+    "preoccupation": 0.8
+   },
+   "composite": 0.762,
+   "reason": "praise is load-bearing, not courtesy",
+   "decision": "core",
+   "rank": 32
+  },
+  {
+   "id": "i04",
+   "type": "interactional",
+   "statement": "under contest, drops to numbered propositions 'no competent economist can deny'",
+   "clusters": [
+    "c08"
+   ],
+   "scores": {
+    "projectibility": 0.7,
+    "cost_refusal": 0.6,
+    "expressive_match": 0.9,
+    "interactional": 1.0,
+    "preoccupation": 0.5
+   },
+   "composite": 0.731,
+   "reason": "the clearest register shift in the corpus",
+   "decision": "core",
+   "rank": 33
+  },
+  {
+   "id": "i07",
+   "type": "interactional",
+   "statement": "at the biggest claim, turns to the reader and offers the plainest warrant",
+   "clusters": [
+    "c01",
+    "c05"
+   ],
+   "scores": {
+    "projectibility": 0.7,
+    "cost_refusal": 0.5,
+    "expressive_match": 0.9,
+    "interactional": 0.8,
+    "preoccupation": 0.6
+   },
+   "composite": 0.692,
+   "reason": "'all we need to say to anyone who doubts is: Look around you!'",
+   "decision": "core",
+   "rank": 34
+  },
+  {
+   "id": "i08",
+   "type": "interactional",
+   "statement": "states his own limits as scope, never as apology",
+   "clusters": [
+    "c08",
+    "c09"
+   ],
+   "scores": {
+    "projectibility": 0.7,
+    "cost_refusal": 0.6,
+    "expressive_match": 0.7,
+    "interactional": 0.9,
+    "preoccupation": 0.5
+   },
+   "composite": 0.679,
+   "reason": "declines to pretend to a balanced treatise",
+   "decision": "core",
+   "rank": 35
+  },
+  {
+   "id": "i09",
+   "type": "interactional",
+   "statement": "refuses to revise when criticism has not landed, and says why",
+   "clusters": [
+    "c08"
+   ],
+   "scores": {
+    "projectibility": 0.6,
+    "cost_refusal": 0.7,
+    "expressive_match": 0.6,
+    "interactional": 0.9,
+    "preoccupation": 0.4
+   },
+   "composite": 0.641,
+   "reason": "phrasing cannot change without meaning changing",
+   "decision": "core",
+   "rank": 36
+  },
+  {
+   "id": "i06",
+   "type": "interactional",
+   "statement": "puts the concessions, the jokes and the daggers in the footnotes",
+   "clusters": [
+    "c10",
+    "c01",
+    "c09"
+   ],
+   "scores": {
+    "projectibility": 0.6,
+    "cost_refusal": 0.4,
+    "expressive_match": 0.9,
+    "interactional": 0.7,
+    "preoccupation": 0.6
+   },
+   "composite": 0.622,
+   "reason": "HEA footnote apparatus is a second voice",
+   "decision": "core",
+   "rank": 37
+  },
+  {
+   "id": "i03",
+   "type": "interactional",
+   "statement": "dissolves a dispute into a difference of terms where he honestly can",
+   "clusters": [
+    "c08",
+    "c10"
+   ],
+   "scores": {
+    "projectibility": 0.7,
+    "cost_refusal": 0.4,
+    "expressive_match": 0.6,
+    "interactional": 1.0,
+    "preoccupation": 0.5
+   },
+   "composite": 0.621,
+   "reason": "then restates his own sense and holds it",
+   "decision": "core",
+   "rank": 38
+  },
+  {
+   "id": "m01",
+   "type": "modulation",
+   "statement": "long periodic build, then a short flat verdict; question-then-blunt-answer",
+   "clusters": [
+    "c05",
+    "c06",
+    "c01"
+   ],
+   "scores": {
+    "projectibility": 0.8,
+    "cost_refusal": 0.4,
+    "expressive_match": 1.0,
+    "interactional": 0.8,
+    "preoccupation": 0.6
+   },
+   "composite": 0.72,
+   "reason": "stdev 44 on mean 30 is the fingerprint, not the mean",
+   "decision": "core",
+   "rank": 39
+  },
+  {
+   "id": "m03",
+   "type": "modulation",
+   "statement": "irony rises exactly where the subject is sacred; mocks poses, never arguments",
+   "clusters": [
+    "c04",
+    "c05",
+    "c09"
+   ],
+   "scores": {
+    "projectibility": 0.7,
+    "cost_refusal": 0.5,
+    "expressive_match": 1.0,
+    "interactional": 0.7,
+    "preoccupation": 0.7
+   },
+   "composite": 0.71,
+   "reason": "religion analogies, 'not only with our ladies', blondes over brunettes",
+   "decision": "core",
+   "rank": 40
+  },
+  {
+   "id": "m02",
+   "type": "modulation",
+   "statement": "register shifts by work: hedged-argumentative / apparatus-heavy / expository-we",
+   "clusters": [
+    "c05",
+    "c10",
+    "c01"
+   ],
+   "scores": {
+    "projectibility": 0.6,
+    "cost_refusal": 0.3,
+    "expressive_match": 1.0,
+    "interactional": 0.5,
+    "preoccupation": 0.5
+   },
+   "composite": 0.583,
+   "reason": "measured: hedges 10.2 vs 7.6; semicolons 3.0 vs 8.0; 1st-person 39 vs 59%",
+   "decision": "core",
+   "rank": 41
+  },
+  {
+   "id": "m04",
+   "type": "modulation",
+   "statement": "untranslated Latin/French/German tags dropped without gloss",
+   "clusters": [
+    "c05",
+    "c09",
+    "c10"
+   ],
+   "scores": {
+    "projectibility": 0.3,
+    "cost_refusal": 0.2,
+    "expressive_match": 0.9,
+    "interactional": 0.4,
+    "preoccupation": 0.5
+   },
+   "composite": 0.427,
+   "reason": "ex visu, membra disjecta, volonte generale, sui generis",
+   "decision": "references"
+  },
+  {
+   "id": "p02",
+   "type": "preoccupation",
+   "statement": "things destroyed by their own success; leaders eliminated by what they built",
+   "clusters": [
+    "c05",
+    "c11",
+    "c12",
+    "c13"
+   ],
+   "scores": {
+    "projectibility": 1.0,
+    "cost_refusal": 0.8,
+    "expressive_match": 0.7,
+    "interactional": 0.6,
+    "preoccupation": 1.0
+   },
+   "composite": 0.842,
+   "reason": "capitalism, entrepreneurs, bourgeoisie, aristocracy, imperialism, tax state",
+   "decision": "core",
+   "rank": 42
+  },
+  {
+   "id": "p03",
+   "type": "preoccupation",
+   "statement": "the gap between what a civilization believes about itself and what it rests on",
+   "clusters": [
+    "c09",
+    "c07",
+    "c11",
+    "c13"
+   ],
+   "scores": {
+    "projectibility": 0.9,
+    "cost_refusal": 0.8,
+    "expressive_match": 0.7,
+    "interactional": 0.6,
+    "preoccupation": 1.0
+   },
+   "composite": 0.809,
+   "reason": "ideology, vision, atavism, classical doctrine, the budget stripped of phrases",
+   "decision": "core",
+   "rank": 43
+  },
+  {
+   "id": "p01",
+   "type": "preoccupation",
+   "statement": "the innovating function and its coming obsolescence",
+   "clusters": [
+    "c01",
+    "c05",
+    "c10",
+    "c12"
+   ],
+   "scores": {
+    "projectibility": 0.9,
+    "cost_refusal": 0.6,
+    "expressive_match": 0.6,
+    "interactional": 0.5,
+    "preoccupation": 1.0
+   },
+   "composite": 0.727,
+   "reason": "cannot stay away from it in any book",
+   "decision": "core",
+   "rank": 44
+  },
+  {
+   "id": "p04",
+   "type": "preoccupation",
+   "statement": "ranking and placing people in the history of a discipline",
+   "clusters": [
+    "c10",
+    "c09"
+   ],
+   "scores": {
+    "projectibility": 0.5,
+    "cost_refusal": 0.3,
+    "expressive_match": 0.7,
+    "interactional": 0.6,
+    "preoccupation": 0.9
+   },
+   "composite": 0.542,
+   "reason": "real but largely an artifact of HEA's genre",
+   "decision": "references"
+  },
+  {
+   "id": "s04",
+   "type": "stable_style",
+   "statement": "analogy domains: medicine, biology, weather, chivalry, religion, ships",
+   "clusters": [
+    "all"
+   ],
+   "scores": {
+    "projectibility": 0.6,
+    "cost_refusal": 0.3,
+    "expressive_match": 0.9,
+    "interactional": 0.6,
+    "preoccupation": 0.7
+   },
+   "composite": 0.595,
+   "reason": "the specific mix is individuating",
+   "decision": "core",
+   "rank": 45
+  },
+  {
+   "id": "s03",
+   "type": "stable_style",
+   "statement": "38% first-person, addresses 'the reader', almost never 'you'",
+   "clusters": [
+    "all"
+   ],
+   "scores": {
+    "projectibility": 0.3,
+    "cost_refusal": 0.1,
+    "expressive_match": 0.7,
+    "interactional": 0.5,
+    "preoccupation": 0.2
+   },
+   "composite": 0.344,
+   "reason": "period-typical but consistent",
+   "decision": "references"
+  },
+  {
+   "id": "s02",
+   "type": "stable_style",
+   "statement": "hedge:booster 2.08, boosters concentrated at verdicts",
+   "clusters": [
+    "all"
+   ],
+   "scores": {
+    "projectibility": 0.3,
+    "cost_refusal": 0.1,
+    "expressive_match": 0.6,
+    "interactional": 0.3,
+    "preoccupation": 0.2
+   },
+   "composite": 0.3,
+   "reason": "the placement is distinctive, the rate is not",
+   "decision": "references"
+  },
+  {
+   "id": "s01",
+   "type": "stable_style",
+   "statement": "sentence mean 30 / median 25 / p10 8 / p90 57",
+   "clusters": [
+    "all"
+   ],
+   "scores": {
+    "projectibility": 0.1,
+    "cost_refusal": 0.0,
+    "expressive_match": 0.4,
+    "interactional": 0.1,
+    "preoccupation": 0.0
+   },
+   "composite": 0.125,
+   "reason": "bare average; generic",
+   "decision": "references"
+  },
+  {
+   "id": "s05",
+   "type": "stable_style",
+   "statement": "paragraph mean 85 words vs median 25 - long blocks broken by short ones",
+   "clusters": [
+    "all"
+   ],
+   "scores": {
+    "projectibility": 0.1,
+    "cost_refusal": 0.0,
+    "expressive_match": 0.4,
+    "interactional": 0.1,
+    "preoccupation": 0.0
+   },
+   "composite": 0.125,
+   "reason": "generic for the genre",
+   "decision": "references"
+  }
+ ]
+}
