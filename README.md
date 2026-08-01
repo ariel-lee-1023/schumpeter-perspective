@@ -1,14 +1,22 @@
 # schumpeter-perspective
 
-A **Claude Skill** that analyzes economic, political, historical, and institutional questions through the documented thinking style of the Austrian-American economist and sociologist **Joseph A. Schumpeter** (1883–1950) — judge a system by how it creates and destroys structures rather than how it administers them, strip the analytic kernel from the ideological cloak, and treat prognosis as no kind of advocacy.
+A **portable perspective module** that analyzes economic, political, historical, and institutional questions through the documented thinking style of the Austrian-American economist and sociologist **Joseph A. Schumpeter** (1883–1950) — judge a system by how it creates and destroys structures rather than how it administers them, strip the analytic kernel from the ideological cloak, and treat prognosis as no kind of advocacy.
 
 It is a *thinking-style tool* for analysis and ideation. It is not affiliated with or authored by Joseph Schumpeter or his estate, and it must not be used to attribute invented statements to him. See [Disclaimer](#disclaimer).
 
 ---
 
+## What it is
+
+Plain Markdown, no code and no dependencies. A front-loaded core file carries the persona; a `references/` tree carries the depth, loaded on demand rather than all at once.
+
+That makes it usable anywhere a model can be given text: drop it into an agent framework that reads instruction files from a directory, paste the core file in as a system prompt, attach it to a chat, retrieve the reference modules through RAG, or read it yourself as a study aid. The core is deliberately kept small (~4,100 tokens) so it fits in a system prompt with room to spare; the reference files are sized for individual retrieval (~800–2,000 tokens each).
+
+Only one convention is tool-specific: the YAML frontmatter at the top of `SKILL.md`, which agent runtimes use for discovery and auto-loading. Nothing else depends on it — strip the frontmatter and the file still works as a prompt.
+
 ## What it does
 
-Loaded into a Claude session, the skill reframes a question the way Schumpeter's published work does:
+Given a question, it reframes it the way Schumpeter's published work does:
 
 - **Create and destroy, not administer.** The problem usually visualized is how a system manages existing structures; the relevant problem is nearly always how it makes and unmakes them.
 - **Judge over time, never from a moment.** A system that at every instant makes the best of its possibilities may lose over fifty years to one that never does — because the failure is a condition of the speed.
@@ -45,18 +53,31 @@ Confidence boundaries are documented in [`references/provenance.md`](references/
 
 ```
 schumpeter-perspective/
-├── SKILL.md                    core embodiment artifact, front-loaded
-└── references/
+├── SKILL.md                    core persona, front-loaded — load this first, always
+└── references/                 depth, loaded on demand
     ├── frameworks.md           named constructs in his exact senses
-    ├── clusters/
+    ├── clusters/               one module per source work
     │   ├── c01-c03-business-cycles.md
     │   ├── c04-c08-capitalism-socialism-democracy.md
     │   ├── c09-c10-history-of-economic-analysis.md
     │   ├── c11-c12-imperialism-social-classes.md
     │   └── c13-tax-state.md
     ├── episodic.md             attested lower-priority material
-    └── provenance.md           source map, fidelity scores, gaps
+    ├── provenance.md           source map, fidelity scores, gaps
+    └── scores.json             per-element scoring audit log
 ```
+
+The core is front-loaded on purpose: the highest-identification content sits at the top, so that if the file is truncated from the end — by a context limit, by compaction, by a shorter excerpt — what survives is still the part that carries the voice.
+
+## Using it
+
+**As a system prompt.** Paste `SKILL.md` in whole. Strip the YAML frontmatter if your setup does not expect it; nothing below it depends on the frontmatter.
+
+**In an agent framework.** Put the directory wherever the runtime looks for instruction modules. The last section of `SKILL.md` tells the host agent which reference file to pull for which kind of question, so the depth stays out of the context window until it is wanted.
+
+**With retrieval.** Index `references/` and let the core file's routing section drive which module gets fetched. Each is self-contained and sized for a single retrieval.
+
+**Without a model at all.** `frameworks.md` is a usable reference on Schumpeter's terminology, and `provenance.md` documents exactly which claim rests on which source.
 
 ## Source corpus
 
