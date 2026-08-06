@@ -4,6 +4,13 @@ The honesty lives here, never in `SKILL.md`. Built by the `persona-distiller` pi
 (full-rigor mode) from five works, **~1,143,000 words** of single-authored text spanning
 1918–1954.
 
+**Revision 1.1.0 (2026-08-06)** — a second pass over the same corpus, no new sources. The five
+cluster modules were deepened from ~1,500–1,900 tokens each to ~2,200–3,900 (the spec band is
+1,500–4,000), and the standing `voice.md` module — absent from 1.0.0 — was built and verified.
+The cluster *structure* is unchanged: same five files, same partition, same headings. What
+changed inside them is recorded in "Second-pass additions" below; the voice module's own
+verification is under "Fidelity results."
+
 ## Corpus & coverage map
 
 | cluster | source | words | kind | period | domains |
@@ -113,7 +120,46 @@ Per-work modulation (this is the individuating part, not the aggregate):
 | Tax State | 32.7 | 7.3 | 4.2 | 2.2 | 2.0 | 0.75 | 46.9 |
 
 Em-dash and exclamation counts for the two translated volumes are corrupted by OCR damage and
-were excluded.
+were excluded. Maximum sentence length in the aggregate (4,792 words) is likewise an OCR artifact.
+
+**Register segments measured in the 1.1.0 pass** (same script, run over the three CSD prefaces and
+over CSD chs. 7–8 as a genre-matched exposition holdout). These are the rows `voice.md` generates
+against; the aggregate is the wrong target for any register anyone would actually be asked to write.
+
+| segment | words | sent. mean | median | hedges/1k | boosters/1k | h:b | 1st % |
+|---|---|---|---|---|---|---|---|
+| CSD chs. 7–8 (exposition holdout) | 10,305 | 34.2 | 29 | 9.6 | 3.2 | 3.00 | 43.3 |
+| Preface 1 (1942), setting out | 894 | 26.3 | 22.5 | 6.7 | 2.2 | 3.00 | 80.0 |
+| Preface 2 (1946), answering charges | 1,536 | 27.0 | 23 | 7.2 | 7.2 | **1.00** | 69.2 |
+| Preface 3 (1949), declining to advise | 1,114 | 33.8 | 27 | 9.0 | 1.8 | **5.00** | 73.7 |
+
+**New finding, and it refines the 1.0.0 modulation rule.** The contested register is not "the
+prefaces" — it is *being charged*. Preface 3, where he declines to advise England, moves in the
+opposite direction from Preface 2 on every axis: sentences *lengthen* (33.8 against 27.0) and
+hedging outruns insistence five to one, against parity. Deference and defence are opposite
+registers, and 1.0.0 had no rule separating them. `voice.md` now does.
+
+**A number in the core is loose and is left standing.** "How I sound" says his sentences shorten
+"by about a quarter" under attack. Against the genre-matched exposition holdout (34.2 → 27.0) that
+is right, at 21%; against the corpus aggregate (30.3 → 27.0) it is 11%. The core's claim is
+therefore true on the comparison that matters and misleading on the one a reader is likelier to
+make, so `voice.md` states the absolute target (mean 27, median 23) and an explicit floor, since
+that is what steers generation. The core line was not rewritten.
+
+**Absence scan (1.1.0)** — over the full corpus, feeding `voice.md`'s avoid-list. Zero occurrences
+in 1.14M words: every contraction (*don't*, *it's*, *isn't*, *let's*, *I've*); *arguably*;
+*crucially*; *firstly*; *Overall,*; *To summarize*; *I would argue*; *In today's*; *At the end of
+the day*; *That said*; *key takeaway*; *stakeholder*; *robust*; *nuanced*; *impactful*; *paradigm
+shift*; *studies show*; *data suggests*; *research indicates*. `conspicuously_absent_common_words`
+returns empty at corpus scale (every common word occurs somewhere in a million words), so the
+avoid-list was built by targeted rate measurement instead — that is what the script's absence
+feature cannot do at this size, and it is worth knowing before trusting an empty result.
+
+**Self-reference, and it is register-bound.** *I do not* occurs **0 times in *Business Cycles***
+against 48 in CSD and 76 in the *History*. Where the treatise needs a personal commitment it uses
+the third person: *the writer* / *the present writer*, 60 occurrences in BC and 48 in HEA, 0 in the
+two translated essays. This was not in 1.0.0 and is now a modulation rule in `voice.md` and a
+register fact in the `c01–c03` module.
 
 ## Fidelity results
 
@@ -206,6 +252,74 @@ double the ordinary rate) rather than the lexicon, which is what converged.
   which (*may*, *could*, *must*, *kind*, *sort*) are ordinary modals rather than stance markers.
   These rates are therefore crude, and further iteration would be fitting the metric rather than
   the voice. Stopped deliberately.
+
+### Style-match test, 1.1.0 re-run — **failed once more, and the failure was informative**
+
+`voice.md` is the sustained-prose configuration, so the Stage 5 pair (core + `voice.md`) was
+re-tested against genre-matched originals: CSD chs. 7–8 for exposition, the CSD 2nd-edition preface
+for the contested register.
+
+**Failure: the two registers came out inverted.** The expository sample measured h:b **1.00** with
+boosters at 7.9/1k — the *contested* profile — while the contested sample measured h:b **4.00**
+with a sentence mean of 18.1 against the original's 27.0. The first draft of `voice.md` stated the
+modulation as *directions* ("shorter, plainer, harder") without floors or reciprocals, and a
+direction with no bound is followed until it runs out. Three rules were added:
+
+1. **A floor under the contested register.** 27 words is still a long sentence; the subordination
+   does not go away under attack, only the hedging does. A contested passage below a mean of 24, or
+   a median in the teens, has been written as staccato rebuttal.
+2. **The reciprocal rule.** Absolute adverbs are contagious once admitted, so the expository
+   register carries its own explicit target (h:b ~3.0, boosters 3–4/1k, mean 34) — the rule that
+   was missing, and the one violated first.
+3. **A second-person guard**, with the single attested exception (*Look around you!*) named, after
+   the first expository sample drifted to 5.3% second person against his 0.0%.
+
+A **generation-targets table** (four registers × five features, each with its matched original) was
+added to the measured block, because a bare direction had already proven unfollowable once.
+
+**Final samples, after the rules were fixed:**
+
+| | sent. mean | median | hedges/1k | boosters/1k | h:b | 2nd person | MATTR |
+|---|---|---|---|---|---|---|---|
+| Expository sample | 36.0 | 32 | 11.7 | 2.9 | 4.00 | 0.0% | 0.468 |
+| *matched original (CSD 7–8)* | *34.2* | *29* | *9.6* | *3.2* | *3.00* | *0.0%* | *0.509* |
+| Contested sample | 28.7 | 25 | 7.3 | 9.2 | 0.80 | 0.0% | 0.510 |
+| *matched original (pref. 2)* | *27.0* | *23* | *7.2* | *7.2* | *1.00* | *0.0%* | *0.512* |
+
+**PASS.** Sentence shape matches within ~2 words of mean in both registers, both samples sit on the
+correct side of their target ratio, and — the thing 1.0.0 could not do — the *contrast* between the
+registers is now 5× on h:b where his own is 3×, against 1.3× (compressed, wrong direction) before.
+Avoid-list scan on both samples: **zero violations**.
+
+**Residual divergences, not chased further:**
+- Both samples overshoot their ratio target by roughly one notch in opposite directions (4.0 against
+  3.0 calm; 0.8 against 1.0 contested). Five iterations oscillated around this rather than
+  converging, which is the signature of fitting the metric: `style_metrics.py` scores *may*,
+  *might*, *could*, *must*, *kind* and *sort* as stance markers when they are ordinary modals, so
+  small rewrites flip the ratio without changing how the prose reads. Stopped deliberately, as in
+  1.0.0.
+- Lexical diversity in the expository sample runs 0.468 against 0.509 — the same gap logged in
+  1.0.0 and unimproved.
+- First person in the contested sample runs 77.8% against his 69.2%. Also carried over from 1.0.0.
+
+## Second-pass additions (1.1.0)
+
+Everything below was extracted from the same five sources in the second pass. Nothing was cut; the
+cluster files grew.
+
+| module | added |
+|---|---|
+| `voice.md` (new) | Eight construction rules with attested fragments; the measured avoid-list; five modulation rules with absolute target bands; a register-range table; metaphor-domain inventory; opening and closing moves; the full measured baseline plus register segments; six anti-drift pairs |
+| `c01–c03` | *the writer* as displaced self-reference and the zero *I do not*; the three definitions of innovation and the two independent arguments separating it from invention; the consumers'-initiative case (railroads vs. mail coaches; "psychotechnics of advertising"); the **falsifiability clause** — he names what would sink his own schema; why saving and Growth are relegated; the magnifying-glass defence of a deliberately absurd model; "statistical measurability is no advantage if the measurable thing is devoid of meaning"; the footnote register as a separate voice |
+| `c04–c08` | The three prefaces measured as three distinct registers; the capitalist-achievement case argued *before* the decay thesis (Queen Elizabeth's silk stockings); the exact "revolutionized from within" and "industrial mutation" formulations; the rationalist-and-anti-heroic passage; the democracy demolition restored to its three numbered steps, with the manufactured will entering the theory "on the ground floor as it should"; the monopoly reply quoted to its three propositions; the full defeatism passage including "what normal man will refuse to defend his life"; the gratitude that precedes the answers |
+| `c09–c10` | *Filiation of Scientific Ideas* as the book's stated purpose; science as "tooled knowledge" and the primitive-magic consequence he accepts; economic sociology defined against economic analysis in one sentence; four named diagnostic constructs — Classical Situation, the **Ricardian Vice**, the Art of Triviality, the Great Gap; Keynes, Marshall and the scholastics added to the appraisals |
+| `c11–c12` | The four-step economic argument (free trade → protectionism inessential → export monopolism → who actually benefits and who pays); the English counter-history from Pitt to Gladstone with the conceded Derby-candidates awkwardness; credit given to Bauer and Hilferding by name; "the momentum of the machine in motion"; the terminological manner of the *objectless* coinage |
+| `c13` | Register profile (longest sentences, most interrogative in the corpus); the historical derivation from the demesne economy and "taxes not only helped to create the state, they helped to form it"; the tax-state-as-pleonasm remark; the state as "peripheral… alien… even hostile, in any case derived"; **the theoretical limit stated as a principle** — the state may withdraw only what leaves private interest in production intact — and why a principle without a rate is the only result the material supports; the bar-setting move before the crisis diagnosis |
+
+The four constructs newly surfaced in `c09–c10` (Classical Situation, Ricardian Vice, Art of
+Triviality, Great Gap) are named constructs and would properly also be defined in `frameworks.md`.
+They are defined in the cluster module for now; folding them into `frameworks.md` is the obvious
+next edit and was left out of this pass because it was not in scope.
 
 ## Known gaps and where to trust the persona less
 

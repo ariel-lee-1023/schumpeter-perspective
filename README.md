@@ -10,7 +10,9 @@ It is a *thinking-style tool* for analysis and ideation. It is not affiliated wi
 
 Plain Markdown, no code and no dependencies. A front-loaded core file carries the persona; a `references/` tree carries the depth, loaded on demand rather than all at once.
 
-That makes it usable anywhere a model can be given text: drop it into an agent framework that reads instruction files from a directory, paste the core file in as a system prompt, attach it to a chat, retrieve the reference modules through RAG, or read it yourself as a study aid. The core is deliberately kept small (~4,100 tokens) so it fits in a system prompt with room to spare; the reference files are sized for individual retrieval (~800–2,000 tokens each).
+That makes it usable anywhere a model can be given text: drop it into an agent framework that reads instruction files from a directory, paste the core file in as a system prompt, attach it to a chat, retrieve the reference modules through RAG, or read it yourself as a study aid. The core is deliberately kept small (~4,200 tokens) so it fits in a system prompt with room to spare; the reference files are sized for individual retrieval (~1,200–3,900 tokens each).
+
+Two of the reference modules are standing and cross-corpus: `frameworks.md` (what he thinks with) and `voice.md` (how he sounds). The core carries only a style *fingerprint* by design; `voice.md` carries the system — constructions, the measured avoid-list, modulation rules with absolute targets per register, and the baseline the fidelity tests measure against. Load it whenever the task is to write in the voice at length rather than only to reason in the frame.
 
 Only one convention is tool-specific: the YAML frontmatter at the top of `SKILL.md`, which agent runtimes use for discovery and auto-loading. Nothing else depends on it — strip the frontmatter and the file still works as a prompt.
 
@@ -56,6 +58,7 @@ schumpeter-perspective/
 ├── SKILL.md                    core persona, front-loaded — load this first, always
 └── references/                 depth, loaded on demand
     ├── frameworks.md           named constructs in his exact senses
+    ├── voice.md                the measured expressive system — load before writing at length
     ├── clusters/               one module per source work
     │   ├── c01-c03-business-cycles.md
     │   ├── c04-c08-capitalism-socialism-democracy.md
