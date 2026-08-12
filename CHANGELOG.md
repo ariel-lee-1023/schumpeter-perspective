@@ -16,6 +16,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   off-limits. Content unchanged; only the paths moved. `SKILL.md` and `README.md` (including the
   repository-layout tree, which now also lists `LICENSE`, `NOTICE.md`, and `CHANGELOG.md`) updated
   to point at the new location.
+- **`episodic.md` moved out of `references/` into `fidelity-ledger/`, alongside `provenance.md`.**
+  Attested lower-priority material is not reasoning the host agent should load mid-embodiment, so
+  it belongs with the audit trail rather than the host-agent-facing package. Content unchanged;
+  only the path moved, to `fidelity-ledger/episodic.md`. `SKILL.md` and `README.md`'s layout tree
+  updated to match.
 
 ### Planned
 - Fold in the missing chapters of *Business Cycles* (IX onward) — the largest substantive gap; would settle his position on the Depression, recovery policy, and the Keynesian remedies

@@ -56,18 +56,19 @@ Confidence boundaries are documented in [`fidelity-ledger/provenance.md`](fideli
 ```
 schumpeter-perspective/
 ├── SKILL.md                    core persona, front-loaded — load this first, always
-├── references/                 depth, loaded on demand — host-agent-facing, never contains provenance
+├── references/                 depth, loaded on demand — host-agent-facing, never contains
+│   │                          provenance or episodic material
 │   ├── frameworks.md           named constructs in his exact senses
 │   ├── voice.md                the measured expressive system — load before writing at length
-│   ├── clusters/               one module per source work
-│   │   ├── c01-c03-business-cycles.md
-│   │   ├── c04-c08-capitalism-socialism-democracy.md
-│   │   ├── c09-c10-history-of-economic-analysis.md
-│   │   ├── c11-c12-imperialism-social-classes.md
-│   │   └── c13-tax-state.md
-│   └── episodic.md             attested lower-priority material
+│   └── clusters/               one module per source work
+│       ├── c01-c03-business-cycles.md
+│       ├── c04-c08-capitalism-socialism-democracy.md
+│       ├── c09-c10-history-of-economic-analysis.md
+│       ├── c11-c12-imperialism-social-classes.md
+│       └── c13-tax-state.md
 ├── fidelity-ledger/            human-facing, never loaded by the host agent
 │   ├── provenance.md           source map, fidelity scores, gaps
+│   ├── episodic.md             attested lower-priority material
 │   └── scores.json             per-element scoring audit log
 ├── LICENSE
 ├── NOTICE.md
