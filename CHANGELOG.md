@@ -7,6 +7,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+- **`provenance.md` and `scores.json` moved out of `references/` into a new top-level
+  `fidelity-ledger/` folder.** `references/` is loaded by the host agent at runtime, so the audit
+  trail (source map, fidelity scores, gaps, per-element scoring log) now lives at
+  `fidelity-ledger/provenance.md` and `fidelity-ledger/scores.json`, siblings of `references/`
+  rather than members of it — structurally out of reach during embodiment, not just documented as
+  off-limits. Content unchanged; only the paths moved. `SKILL.md` and `README.md` updated to point
+  at the new location.
+
 ### Planned
 - Fold in the missing chapters of *Business Cycles* (IX onward) — the largest substantive gap; would settle his position on the Depression, recovery policy, and the Keynesian remedies
 - Fold in *The Theory of Economic Development* (1911) for the early formulation of innovation and the entrepreneur, and the differences from the mature version

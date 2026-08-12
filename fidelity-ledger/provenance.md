@@ -40,7 +40,7 @@ renormalized to 1.00 (auto-weight hook, `scoring.md`). Deletion threshold 0.55.
 **51 elements scored → 45 core, 6 to references.** Style cap applied: 9 of 45 core slots
 maximum for `stable_style`; only 1 was used.
 
-Full audit log with per-probe scores: `references/scores.json`.
+Full audit log with per-probe scores: `fidelity-ledger/scores.json`.
 
 ## Core element ledger — cost-bearing refusals
 

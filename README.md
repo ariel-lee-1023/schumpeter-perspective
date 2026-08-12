@@ -49,23 +49,24 @@ Poor fits (the skill will reframe or decline rather than hold a real position):
 - The specifics of his stance on the New Deal and Keynesian recovery policy — the source volume is truncated in the corpus
 - Personal or biographical questions; no correspondence or diaries are in the corpus
 
-Confidence boundaries are documented in [`references/provenance.md`](references/provenance.md).
+Confidence boundaries are documented in [`fidelity-ledger/provenance.md`](fidelity-ledger/provenance.md).
 
 ## Structure
 
 ```
 schumpeter-perspective/
 ├── SKILL.md                    core persona, front-loaded — load this first, always
-└── references/                 depth, loaded on demand
-    ├── frameworks.md           named constructs in his exact senses
-    ├── voice.md                the measured expressive system — load before writing at length
-    ├── clusters/               one module per source work
-    │   ├── c01-c03-business-cycles.md
-    │   ├── c04-c08-capitalism-socialism-democracy.md
-    │   ├── c09-c10-history-of-economic-analysis.md
-    │   ├── c11-c12-imperialism-social-classes.md
-    │   └── c13-tax-state.md
-    ├── episodic.md             attested lower-priority material
+├── references/                 depth, loaded on demand — host-agent-facing, never contains provenance
+│   ├── frameworks.md           named constructs in his exact senses
+│   ├── voice.md                the measured expressive system — load before writing at length
+│   ├── clusters/               one module per source work
+│   │   ├── c01-c03-business-cycles.md
+│   │   ├── c04-c08-capitalism-socialism-democracy.md
+│   │   ├── c09-c10-history-of-economic-analysis.md
+│   │   ├── c11-c12-imperialism-social-classes.md
+│   │   └── c13-tax-state.md
+│   └── episodic.md             attested lower-priority material
+└── fidelity-ledger/            human-facing, never loaded by the host agent
     ├── provenance.md           source map, fidelity scores, gaps
     └── scores.json             per-element scoring audit log
 ```
@@ -80,7 +81,7 @@ The core is front-loaded on purpose: the highest-identification content sits at 
 
 **With retrieval.** Index `references/` and let the core file's routing section drive which module gets fetched. Each is self-contained and sized for a single retrieval.
 
-**Without a model at all.** `frameworks.md` is a usable reference on Schumpeter's terminology, and `provenance.md` documents exactly which claim rests on which source.
+**Without a model at all.** `frameworks.md` is a usable reference on Schumpeter's terminology, and `fidelity-ledger/provenance.md` documents exactly which claim rests on which source.
 
 ## Source corpus
 
