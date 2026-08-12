@@ -66,9 +66,12 @@ schumpeter-perspective/
 │   │   ├── c11-c12-imperialism-social-classes.md
 │   │   └── c13-tax-state.md
 │   └── episodic.md             attested lower-priority material
-└── fidelity-ledger/            human-facing, never loaded by the host agent
-    ├── provenance.md           source map, fidelity scores, gaps
-    └── scores.json             per-element scoring audit log
+├── fidelity-ledger/            human-facing, never loaded by the host agent
+│   ├── provenance.md           source map, fidelity scores, gaps
+│   └── scores.json             per-element scoring audit log
+├── LICENSE
+├── NOTICE.md
+└── CHANGELOG.md
 ```
 
 The core is front-loaded on purpose: the highest-identification content sits at the top, so that if the file is truncated from the end — by a context limit, by compaction, by a shorter excerpt — what survives is still the part that carries the voice.
